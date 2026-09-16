@@ -22,10 +22,24 @@ Build for production:
 npm run build
 ```
 
+Run the production static server:
+
+```sh
+npm start
+```
+
+Run with PM2:
+
+```sh
+pm2 start ecosystem.config.cjs
+pm2 save
+```
+
 ## Configuration
 
 All editable site values live in `.env`.
 
+- `PORT`: production server port used by `npm start` and PM2
 - `VITE_SITE_URL`: production website URL
 - `VITE_BOT_NAME`: displayed brand name
 - `VITE_TAGLINE`: hero description

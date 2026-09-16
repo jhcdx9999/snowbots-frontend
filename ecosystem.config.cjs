@@ -1,0 +1,13 @@
+module.exports = {
+  apps: [
+    {
+      name: "snowbots",
+      script: "server.cjs",
+      instances: 1,
+      exec_mode: "fork",
+      env: {
+        NODE_ENV: "production",
+      },
+    },
+  ],
+};
