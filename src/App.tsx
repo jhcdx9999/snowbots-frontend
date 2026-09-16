@@ -19,6 +19,7 @@ const config = {
   transactionVolume: import.meta.env.VITE_TRANSACTION_VOLUME,
   activeWallets: import.meta.env.VITE_ACTIVE_WALLETS,
   highestProfit: import.meta.env.VITE_HIGHEST_PROFIT,
+  smartWalletsList: import.meta.env.VITE_SMART_WALLETS_LIST,
 };
 
 const navLinks = [
@@ -31,7 +32,7 @@ const dashboardStats = [
   { value: config.transactionVolume, label: "Transaction volume" },
   { value: config.activeWallets, label: "Active wallets" },
   { value: config.highestProfit.replace(/\s*USDC$/i, ""), unit: "USDC", label: "Highest profit" },
-  { value: "24/7", label: "Market coverage" },
+  { value: config.smartWalletsList, label: "Smart wallets list" },
 ];
 
 const features: Array<{
@@ -70,12 +71,6 @@ const features: Array<{
     title: "Signal Overview",
     copy: "Showcase market awareness, wallet tracking, and token monitoring without executing trades on the website.",
   },
-  {
-    id: "community",
-    icon: "/icons/tg-native.svg",
-    title: "TG Native Experience",
-    copy: "The website stays informational. Trading actions, alerts, and settings belong inside the Telegram bot.",
-  },
 ];
 
 const questions = [
@@ -85,7 +80,7 @@ const questions = [
   },
   {
     question: "What does Snowbots focus on?",
-    answer: "Snowbots focuses on token sniping, wallet tracking, copy trading, and fast Telegram-native trading workflows.",
+    answer: "Snowbots focuses on token sniping, profitable smart-wallet discovery, wallet tracking, copy trading, and fast Telegram-native workflows.",
   },
   {
     question: "Where can I change settings?",
@@ -155,6 +150,29 @@ export function App() {
             <span>{stat.label}</span>
           </div>
         ))}
+      </section>
+
+      <section className="smart-wallet-band" aria-label="Smart Wallet Discovery">
+        <div className="smart-wallet-content">
+          <p className="eyebrow">Core intelligence layer</p>
+          <h2>Smart Wallet Discovery</h2>
+          <p>Find profitable smart wallets worth tracking.</p>
+        </div>
+
+        <div className="smart-wallet-points" aria-label="Smart wallet discovery highlights">
+          <div>
+            <strong>Hot pair winners</strong>
+            <span>Identify wallets capturing strong gains from recently active or trending trading pairs.</span>
+          </div>
+          <div>
+            <strong>Smart addresses</strong>
+            <span>Highlight addresses with long-cycle profitability and consistent on-chain trading performance.</span>
+          </div>
+          <div>
+            <strong>Telegram-first workflow</strong>
+            <span>Discovery, tracking, alerts, and trading decisions stay inside the TG bot.</span>
+          </div>
+        </div>
       </section>
 
       <section className="feature-band" id="features" aria-label="Snowbots features">

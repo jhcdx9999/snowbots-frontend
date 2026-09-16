@@ -360,10 +360,76 @@ h2 {
   font-weight: 800;
 }
 
+.smart-wallet-band,
 .feature-band,
 .qa-band {
   width: min(1180px, calc(100% - 40px));
   margin: 0 auto;
+}
+
+.smart-wallet-band {
+  display: grid;
+  grid-template-columns: minmax(0, 0.95fr) minmax(320px, 0.72fr);
+  gap: 28px;
+  align-items: stretch;
+  margin-top: 72px;
+  padding: 34px;
+  border: 1px solid rgba(13, 94, 215, 0.18);
+  border-radius: 8px;
+  background:
+    linear-gradient(135deg, rgba(21, 128, 255, 0.14), rgba(255, 255, 255, 0.94)),
+    var(--white);
+  box-shadow: 0 18px 58px rgba(9, 71, 147, 0.12);
+}
+
+.smart-wallet-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.smart-wallet-content .eyebrow {
+  color: var(--blue-700);
+}
+
+.smart-wallet-content h2 {
+  margin-bottom: 18px;
+}
+
+.smart-wallet-content p:last-child {
+  max-width: 700px;
+  margin-bottom: 0;
+  color: var(--muted);
+  font-size: 1.05rem;
+  line-height: 1.7;
+}
+
+.smart-wallet-points {
+  display: grid;
+  gap: 12px;
+}
+
+.smart-wallet-points div {
+  padding: 18px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.74);
+}
+
+.smart-wallet-points strong,
+.smart-wallet-points span {
+  display: block;
+}
+
+.smart-wallet-points strong {
+  margin-bottom: 8px;
+  color: var(--blue-950);
+  font-size: 1rem;
+}
+
+.smart-wallet-points span {
+  color: var(--muted);
+  line-height: 1.55;
 }
 
 .feature-band {
@@ -582,9 +648,15 @@ h2 {
   }
 
   .stat-strip,
+  .smart-wallet-band,
   .feature-grid,
   .qa-band {
     grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .smart-wallet-content,
+  .smart-wallet-points {
+    grid-column: 1 / -1;
   }
 
   .qa-heading,
@@ -673,6 +745,7 @@ h2 {
   }
 
   .stat-strip,
+  .smart-wallet-band,
   .feature-band,
   .qa-band {
     width: calc(100% - 32px);
@@ -698,6 +771,16 @@ h2 {
 
   .feature-card {
     min-height: 0;
+  }
+
+  .smart-wallet-band {
+    display: block;
+    margin-top: 48px;
+    padding: 22px;
+  }
+
+  .smart-wallet-points {
+    margin-top: 22px;
   }
 
   .qa-band {

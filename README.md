@@ -53,6 +53,7 @@ All editable site values live in `.env`.
 - `VITE_TRANSACTION_VOLUME`: displayed transaction volume
 - `VITE_ACTIVE_WALLETS`: displayed active wallet count
 - `VITE_HIGHEST_PROFIT`: displayed highest profit
+- `VITE_SMART_WALLETS_LIST`: displayed smart wallet list count
 
 The default hero image path is `/images/snowbots-hero.jpg`. Put the final JPG or PNG in `public/images/`, then update `VITE_HERO_IMAGE` if the filename changes.
 

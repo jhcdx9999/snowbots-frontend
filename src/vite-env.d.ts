@@ -14,6 +14,7 @@ interface ImportMetaEnv {
   readonly VITE_TRANSACTION_VOLUME: string;
   readonly VITE_ACTIVE_WALLETS: string;
   readonly VITE_HIGHEST_PROFIT: string;
+  readonly VITE_SMART_WALLETS_LIST: string;
 }
 
 interface ImportMeta {
